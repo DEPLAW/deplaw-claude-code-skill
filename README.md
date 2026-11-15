@@ -1,21 +1,34 @@
-# DEPLAW-Skill für Claude Code
+# DEPLAW-Skill für Claude Code: Mandate mit KI über BPMN-Workflows automatisieren
 
-Der DEPLAW-Skill für Claude Code erzeugt Workflows, Formulare, Textbausteine und Extraktionsvorlagen für
-[DEPLAW](https://legaldata.tech/was-ist-deplaw), die Legal-Tech-Plattform für juristische Massenverfahren, und prüft sie
-automatisch. Sie beschreiben den gewünschten Ablauf in eigenen Worten, der Skill liefert eine importierbare Datei.
+Mit dem DEPLAW-Skill für Claude Code beschreiben Kanzleien, Versicherer und Rechtsabteilungen in ein paar Sätzen, wie
+ein Mandat bearbeitet werden soll. Claude Code baut daraus einen echten BPMN-Workflow mit KI-Schritten, Fristen,
+Schreiben und beA-Versand. [DEPLAW](https://legaldata.tech/was-ist-deplaw), die Legal-Tech-Plattform für juristische
+Massenverfahren, führt diesen Workflow dann für jedes einzelne Mandat aus.
 
-![Ein Workflow im Workflow-Editor von DEPLAW](assets/workflow-editor.webp)
-*So sieht ein Workflow im Workflow-Editor von DEPLAW aus: KI-Schritte, Akte befüllen, Mandant informieren, beA-Versand.
-Solche Abläufe erzeugt der Skill als BPMN-Datei.*
+**1. Den Ablauf in Claude Code beschreiben**
+
+![Beschreibung eines Massenverfahrens in Claude Code](assets/1-beschreibung-in-claude-code.jpg)
+
+> Orchestriere das Massenverfahren Kapitalanlage: Unterlagen per KI auslesen, Anspruchsschreiben, 14 Tage Frist …
+
+**2. Ein BPMN-Workflow entsteht, geprüft und im Editor von DEPLAW anpassbar**
+
+![Der erzeugte BPMN-Workflow im Workflow-Editor von DEPLAW](assets/2-bpmn-workflow-im-editor.jpg)
+
+**3. DEPLAW bearbeitet jedes Mandat nach diesem Workflow:** KI liest eingehende Unterlagen aus, Schreiben entstehen aus
+Textbausteinen, Fristen und Wiedervorlagen laufen mit, der Versand geht über beA. Menschen geben dort frei, wo es
+juristisch darauf ankommt.
+
+▶ **Film (1 Minute):** [Der DEPLAW-Skill für Claude Code](https://legaldata.tech/ressourcen/insights/deplaw-ki-kanzlei-claude-code)
 
 ## Was der Skill erzeugt
 
 | Artefakt | Format | Wofür |
 |---|---|---|
-| Workflow | BPMN 2.0 (XML) | Fallabläufe mit Fristen, KI-Schritten, beA-Versand und Wiedervorlagen |
+| Workflow | BPMN 2.0 (XML) | Mandatsabläufe mit KI-Schritten, Fristen, Schreiben, beA-Versand und Wiedervorlagen |
 | Formular | JSON | Nachsende- und Akquiseformulare, dynamische Eingabemasken |
 | Textbaustein | JSON | Schreiben und E-Mails mit Platzhaltern und Bedingungen |
-| Extraktionsvorlage | JSON | Daten aus eingehenden Dokumenten auslesen |
+| Extraktionsvorlage | JSON | Daten aus eingehenden Dokumenten per KI auslesen |
 
 ## So arbeitet der Skill
 
@@ -24,29 +37,30 @@ Solche Abläufe erzeugt der Skill als BPMN-Datei.*
 3. **Artefakt erzeugen:** BPMN-XML oder JSON nach den dokumentierten Regeln der Plattform.
 4. **Automatisch prüfen:** Eine Pflicht-Checkliste wird abgearbeitet; Fehler korrigiert der Skill selbst und prüft erneut.
 5. **Ergebnis übergeben:** fertige Datei plus Zusammenfassung mit ID, verwendeten Bausteinen und offenen Annahmen.
+   Importiert, versioniert und geprüft wird in DEPLAW, nicht in der KI.
 
-**Beispielanfrage:**
-> Lege einen Workflow an: Geht ein Schreiben der Gegenseite ein, wird eine Frist von zwei Wochen notiert, der Mandant
-> per E-Mail informiert und nach Fristablauf eine Wiedervorlage für die Sachbearbeitung erzeugt.
+## Mandatsdaten bleiben in DEPLAW
 
-## Voraussetzungen
-
-- [Claude Code](https://claude.com/claude-code)
-- ein DEPLAW-System, in das die erzeugten Dateien importiert werden
+Claude Code baut nur den Workflow. An der eigentlichen Fallbearbeitung ist Claude Code nicht beteiligt: Mandatsdaten,
+Kommunikation über beA und die Ausführung der Workflows bleiben vollständig in DEPLAW.
 
 ## Bezug
 
-Den Skill erhalten Sie über den DEPLAW-Marketplace:
+Den Skill erhalten DEPLAW-Kunden über den DEPLAW-Marketplace:
 **[DEPLAW-Skill für Claude Code anfordern](https://legaldata.tech/marketplace/deplaw-automation-generator-skill)**
 
-Hintergrund: [DEPLAW macht die Kanzlei zur KI-Kanzlei](https://legaldata.tech/ressourcen/insights/deplaw-ki-kanzlei-claude-code)
-· [Dokumentation](https://legaldata.tech/docs) · [Demo anfragen](https://legaldata.tech/demo)
+Mehr: [Anleitung: Workflows mit Claude Code bauen](https://legaldata.tech/docs/workflows/claude-code)
+· [Pressemitteilung](https://legaldata.tech/ressourcen/insights/deplaw-ki-kanzlei-claude-code)
+· [Demo anfragen](https://legaldata.tech/demo)
 
 ## English
 
-The DEPLAW skill for Claude Code creates workflows (BPMN 2.0), forms, text blocks and extraction templates for
-[DEPLAW](https://legaldata.tech/en/what-is-deplaw), the legal tech platform for mass proceedings, from a plain-language
-description and validates them automatically. It is available through the
+**Automate legal cases with LLMs through BPMN workflows.** With the DEPLAW skill for Claude Code, law firms, insurers
+and legal departments describe in a few sentences how a case should be handled. Claude Code turns this into a real
+BPMN 2.0 workflow with AI steps, deadlines, letters and dispatch via beA (Germany's electronic lawyer mailbox), plus
+forms, text blocks and extraction templates, validated automatically. [DEPLAW](https://legaldata.tech/en/what-is-deplaw),
+the legal tech platform for mass proceedings, then runs that workflow for every single case. Case data never leaves
+DEPLAW. Available to DEPLAW customers through the
 [DEPLAW marketplace](https://legaldata.tech/marketplace/deplaw-automation-generator-skill).
 
 ---
